@@ -399,7 +399,7 @@ if ( ! class_exists( 'livy_acf_field_zelda' ) ) :
 				/*
 				*  Email, if email is set
 				*/
-				if ( $type_options['email'] && is_string( $type_options['email'] ) ) {
+				if ( isset($type_options['email']) && $type_options['email'] && is_string( $type_options['email'] ) ) {
 					?>
                     <div class="acf-field-zelda__email acf-field-zelda__fieldWrap" data-zelda-type="email" hidden>
                         <label for="<?php echo esc_attr( $field['name'] ) ?>[email]"><?php echo $type_options['email']
@@ -413,7 +413,7 @@ if ( ! class_exists( 'livy_acf_field_zelda' ) ) :
 				/*
 				*  External, if external is set
 				*/
-				if ( $type_options['external'] && is_string( $type_options['external'] ) ) {
+				if ( isset($type_options['external']) && $type_options['external'] && is_string( $type_options['external'] ) ) {
 					?>
                     <div class="acf-field-zelda__external acf-field-zelda__fieldWrap" data-zelda-type="external" hidden>
                         <label for="<?php echo esc_attr( $field['name'] ) ?>[external]"><?php echo $type_options['external']
